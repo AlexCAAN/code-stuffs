@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diner Menu</title>
+    <link rel="stylesheet" href="diner-menu.css">
+</head>
+<body>
+    <div class="header">
+        <h1>My Restaurant =)</h1>
+        <div class="specials">
+            <h3>You Can Order The Special, It has An Entree and 2 Sides(= price: <button class="price">10.99</button></h3>
+        </div>
+    </div>
+    <div class="content-title">
+        <div class="menu-item" id="entree">
+            <h2>Entree Menu</h2>
+            <div class="content"> 
+                <!-- 5 items -->
+                <div class="food">
+                    <a href="" onclick ="Waitress()"><li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione dolores consectetur!</li></a>
+                    <button class="price"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" id="sides">
+            <h2>Sides Menu</h2>
+            <div class="content">
+                <!-- 10 items -->
+                <div class="food">
+                    <a href="" onclick ="Waitress()"><li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li></a>
+                    <button class="price"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-total">
+            <strong class="total-title">total</strong>
+            <span class="total-price">$27.83</span>
+        </div>
+    </div>
+</body>
+<script>
+    var answers = [
+    "Waitress: The light that burns twice as bright burns half as long.",
+    "Waitress: He found a leprechaun in his walnut shell.",
+    "Waitress: The mysterious diary records the voice.",
+    "Waitress: Everybody should read Chaucer to improve their everyday vocabulary.",
+    "Waitress: There are no heroes in a punk rock band.",
+    "Waitress: Today arrived with a crash of my car through the garage door.",
+    "Waitress: The bug was having an excellent day until he hit the windshield.",
+    "Waitress: She tilted her head back and let whip cream stream into her mouth while taking a bath.",
+    "Waitress: Martha came to the conclusion that shake weights are a great gift for any occasion.",
+    "Waitress: Toddlers feeding raccoons surprised even the seasoned park ranger.",
+    "Waitress: As he looked out the window, he saw a clown walk by.",
+    "Waitress: If my calculator had a history, it would be more embarrassing than my browser history.",
+    "Waitress: He was willing to find the depths of the rabbit hole in order to be with her.",
+    "Waitress: Every manager should be able to recite at least ten nursery rhymes backward."
+    ];
+
+    function choose(choices) {
+        var index = Math.floor(Math.random() * choices.length);
+        return choices[index];
+    }
+
+    function Waitress() {
+        alert ((choose(answers)))
+    }
+
+    var addCartButtons = document.getElementsByClassName('price')[0]
+    for (var i = 0; i < addCartButtons.length; i++) {
+        var button = addCartButtons[i]
+        button.addEventListener('click', addToCartCLicked)
+    }
+
+    function updateCartTotal() {
+        var priceContainers = document.getElementsByClassName('price')[0]
+        var total = 0
+        for (var i = 0; i < addCartButton.length; i++) {
+            var priceContainer = priceContainers[i]
+            var price = parseFloat(priceContainers.innerText.replace('$', ''))
+            total = total + (price)
+        }
+
+        total = Math.round(total * 100) / 100
+        document.getElementsByClassName('total-price')[0].innerText = '$' + total
+    }
+</script>
+</html>
+
+<!--#1 entree menu
+    #2 side menu
+    a main dish comes with 2 sides
+    Waitress is to make a random comment on every choice
+    tell the price of a meal as well as individual prices
+    total price after selection is made
+-->
