@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+
+<style>
+    .todoItem1:hover {
+        cursor: pointer;
+    }
+    .todoItem2:hover {
+        cursor: pointer;
+    }
+    .todoItem3:hover {
+        cursor: pointer;
+    }
+    .todoItem4:hover {
+        cursor: pointer;
+    }
+    .todoItem5:hover {
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+    <div class="todos">
+        <h2>Pending Todos</h2>
+        <ul>
+            <li class="todoItem1" onclick="doneItem()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, animi.</li>
+            <li class="todoItem2" onclick="remove2()">Numquam dolor quo alias nam vel voluptates magni magnam quisquam.</li>
+            <li class="todoItem3" onclick="remove3()">Recusandae eaque quisquam facere ab reprehenderit cupiditate magni placeat quis?</li>
+            <li class="todoItem4" onclick="remove4()">Expedita asperiores nam saepe voluptatem, nostrum aliquid debitis quam recusandae.</li>
+            <li class="todoItem5" onclick="remove5()">Quaerat velit deserunt reprehenderit, vel placeat impedit accusamus non, deleniti!</li>
+        </ul>
+    </div>
+
+    <h2>Completed Todos</h2>
+    <ul class="completedTodoWrapper">
+        <div class="completed"></div>
+    </ul>
+</body>
+<script>
+
+    const storedText = document.querySelectorAll('.todoItem1')[0].innerHTML;
+    const copiedText = storedText
+
+    function remove1() {
+        const removeItems = document.querySelectorAll('.todoItem1');
+        removeItems.forEach(removeItem => removeItem.remove());
+    }
+    function remove2() {
+        const removeItems = document.querySelectorAll('.todoItem2');
+        removeItems.forEach(removeItem => removeItem.remove());
+    }
+    function remove3() {
+        const removeItems = document.querySelectorAll('.todoItem3');
+        removeItems.forEach(removeItem => removeItem.remove());
+    }
+    function remove4() {
+        const removeItems = document.querySelectorAll('.todoItem4');
+        removeItems.forEach(removeItem => removeItem.remove());
+    }
+    function remove5() {
+        const removeItems = document.querySelectorAll('.todoItem5');
+        removeItems.forEach(removeItem => removeItem.remove());
+    }
+</script>
+</html>

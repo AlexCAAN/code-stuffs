@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penis</title>
+    <style>
+        button {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name h1 {
+
+            color: transparent;
+        }
+        .notname h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="first name">
+        <h1>Carlos</h1>
+    </div>
+        <hr>
+    <div class="middle name">
+        <h1>Anthony</h1>
+    </div>
+        <hr>
+    <div class="last name">
+        <h1>Leany</h1>
+    </div>
+        <hr>
+    <button onclick="contentToggle1()">toggle first name</button>
+        <hr>
+    <button onclick="contentToggle2()">toggle middle name</button>
+        <hr>
+    <button onclick="contentToggle3()">toggle last name</button>
+</body>
+    <script>
+        const names1 = document.querySelectorAll('.first')
+
+        function contentToggle1() {
+            names1.forEach((name) => {
+                if (name.classList.contains('name')) {
+                    name.classList.remove('name');
+                    name.classList.add('notname');
+                } else {
+                    name.classList.remove('notname');
+                    name.classList.add('name');
+                }
+            });
+        }
+
+        const names2 = document.querySelectorAll('.middle')
+
+        function contentToggle2() {
+            names2.forEach((name2) => {
+                if (name2.classList.contains('name')) {
+                    name2.classList.remove('name');
+                    name2.classList.add('notname');
+                } else {
+                    name2.classList.remove('notname');
+                    name2.classList.add('name');
+                }
+            });
+        }
+
+        const names3 = document.querySelectorAll('.last')
+
+        function contentToggle3() {
+            names3.forEach((name3) => {
+                if (name3.classList.contains('name')) {
+                    name3.classList.remove('name');
+                    name3.classList.add('notname');
+                } else {
+                    name3.classList.remove('notname');
+                    name3.classList.add('name');
+                }
+            });
+        }
+    </script>
+</html>
